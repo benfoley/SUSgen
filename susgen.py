@@ -11,6 +11,8 @@
 ## where n = the number of sentences you want to generate.
 
 import nltk
+nltk.download('brown')
+
 from random import choice
 import sys
 
@@ -112,10 +114,11 @@ def get_sus():
     sus += article_obj + ' ' + adj_obj + ' ' + obj + '.'
     return sus
 
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print "Usage: python susgen.py n"
+        print("Usage: python susgen.py n")
         exit()
     n = int(sys.argv[1])
     for i in range(0,n):
-        print get_sus()
+        print(get_sus())
